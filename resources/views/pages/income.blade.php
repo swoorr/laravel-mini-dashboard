@@ -9,7 +9,7 @@ $showReport = fn() => $this->report = !$this->report;
 ?>
 
 <x-layout>
-    @volt('buttons')
+    @volt('page-income')
     <div>
 
         <button wire:click="showReport" class="btn btn-primary mt-5 mb-n5">
@@ -23,7 +23,7 @@ $showReport = fn() => $this->report = !$this->report;
         @if($this->report)
             <x-income></x-income>
         @else
-            <x-reports.income></x-reports.income>
+            <x-income.income-report></x-income.income-report>
         @endif
     </div>
     @endvolt
