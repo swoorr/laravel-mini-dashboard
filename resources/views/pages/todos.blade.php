@@ -20,7 +20,7 @@ $remove = function ($id) {
 ?>
 <x-layout>
 
-    @volt
+    @volt('todo')
         <div class="mt-2">
             <h1>Add Todo </h1>
             <form wire:submit="addTodo">
