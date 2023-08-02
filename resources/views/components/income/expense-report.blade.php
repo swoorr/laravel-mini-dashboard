@@ -58,12 +58,14 @@ state(title: null, amount: null, date: now()->format('d.m.Y'), type: 'income', i
             @foreach ($incomes as $income)
                 <tr>
                     <td>
-                            <span class="badge text-bg-light">
+                        <div class="d-flex justify-content-between">
+                                <span class="badge text-bg-light">
                                 {{ $income->title }}
                             </span>
-                        <span class="badge text-bg-light">
+                            <span class="badge text-bg-light">
                                 {{ $income->date }}
                             </span>
+                        </div>
                     </td>
                     <td class="{{$income->type=='income'?'+':'text-danger'}}">
                         {{$income->type=='income'?'+':'-'}}
